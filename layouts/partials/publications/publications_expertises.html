@@ -1,0 +1,33 @@
+{{ with .GetTerms "publications_expertises" }}
+  {{ $count := . | len }}
+  {{ $desktop := site.Params.image.xsmall | default false }}
+  {{ $mobile := site.Params.image.xsmall | default false }}
+  <aside class="list list-expertises">
+    <h3>{{ i18n "expertises.related" $count }}</h3>
+    <ul>
+      {{ range . }}
+        {{ $expertise := partial "func/GetRealExpertise" . }}
+        {{ with $expertise }}
+          <li>
+            {{- with .Params.image}}
+              {{ partial "commons/image.html" (dict
+                "src" .src
+                "alt" .alt
+                "desktop" $desktop
+                "mobile" $mobile
+                "picture_class" "avatar"
+                "crop" "top"
+              ) }}
+            {{ end -}}
+            <div>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              {{ with .Description }}
+                <br><span>{{ partial "func/TruncateContent" (dict "content" . "limit" 110) }}</span>
+              {{ end }}
+            </div>
+          </li>
+        {{end}}
+      {{end}}
+    </ul>
+  </aside>
+{{ end }}

@@ -1,0 +1,16 @@
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+
+# Default
+permalinks:
+  publications_expertises: /publications/expertises/:slug/
+taxonomies:
+  publications_expertise: publications_expertises
