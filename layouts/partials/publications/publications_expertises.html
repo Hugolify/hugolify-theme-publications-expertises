@@ -3,7 +3,7 @@
   {{ $desktop := site.Params.image.xsmall | default false }}
   {{ $mobile := site.Params.image.xsmall | default false }}
   <aside class="list list-expertises">
-    <h3>{{ i18n "expertises.related" $count }}</h3>
+    <p>{{ i18n "expertises.related" $count }}</p>
     <ul>
       {{ range . }}
         {{ $expertise := partial "func/GetRealExpertise" . }}
