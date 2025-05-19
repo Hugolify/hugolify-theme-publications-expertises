@@ -11,6 +11,9 @@ module:
 
 # Default
 permalinks:
-  publications_expertises: /publications/expertises/:slug/
+  taxonomy:
+    publications_expertises: /publications/expertises/
+  term:
+    publications_expertises: /publications/expertises/:slug/
 taxonomies:
   publications_expertise: publications_expertises
