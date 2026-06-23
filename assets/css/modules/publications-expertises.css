@@ -1,0 +1,12 @@
+/* css/modules/publications-expertises.css — hugolify-theme-publications-expertises entry point */
+
+/* Tokens */
+@import '../tokens/publications-expertises.css';
+
+/* Components */
+@import '../components/publications-expertise.css';
+@import '../components/publications-expertises.css';
+
+/* Pages */
+@import '../pages/publications-expertise.css';
+@import '../pages/publications-expertises.css';
