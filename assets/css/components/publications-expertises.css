@@ -1,0 +1,12 @@
+/* components/publications-expertise.css */
+/*
+ * .publications_expertises remaps the full --items-* API onto its --expertises-* tokens, so any
+ * value can be tuned from expertises.json without touching this file.
+ * Usage: <article class="items publications_expertises">
+ */
+@layer components {
+  .publications_expertises {
+    --items-min-width: var(--expertises-min-width);
+    --items-nav-margin-block-start: var(--expertises-nav-margin-block-start);
+  }
+}
