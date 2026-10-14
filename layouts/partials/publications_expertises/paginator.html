@@ -1,4 +1,4 @@
-{{ $paginator := .Paginator.Pages }}
+{{ $paginator := (partial "func/GetPaginator.html" .).Pages }}
 {{ $atf := true }}
 {{ if partial "func/HasImageHero.html" . }}
   {{ $atf = false }}
